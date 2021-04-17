@@ -1,5 +1,21 @@
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input class="bg-indigo-500 text-white p-1 rounded-xl hover:bg-indigo-400" type="submit" value="Save changes">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - Edit</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <p class="text-3xl mx-10">Editing a todo</p>
+    <div class="container mx-auto">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="bg-yellow-500 hover:bg-yellow-600 text-white p-1 rounded" type="submit" value="Save changes">
+            <input class="bg-blue-500 text-white p-1 rounded hover:bg-blue-600" type="submit" value="Cancel">
+        </form>
+    </div> 
+</body>
+</html>
