@@ -1,0 +1,5 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="bg-indigo-500 text-white p-1 rounded-xl hover:bg-indigo-400" type="submit" value="Save changes">
+</form>
