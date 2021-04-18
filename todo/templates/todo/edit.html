@@ -6,15 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo - Edit</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style type="text/css">
+        input#id_title{
+            border: 1px solid #000;
+            width: 250px;
+            padding: 2px;
+        } 
+
+        input#id_description{
+            border: 1px solid #000;
+            width: 250px;
+            padding: 2px;
+            margin-top: 20px;
+        } 
+
+        input#id_completed{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        a{
+            background-color: rgb(218, 42, 42);
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container bg-indigo-500 text-white max-w-full flex justify-around items-center h-14">
+        <p class="text-2xl font-bold">Todo.</p>
+    </div>
+    
     <p class="text-3xl mx-10">Editing a todo</p>
-    <div class="container mx-auto">
+    <div class="container mx-auto mt-5">
         <form action="" method="POST">
             {% csrf_token %}
             {{form.as_p}}
             <input class="bg-yellow-500 hover:bg-yellow-600 text-white p-1 rounded" type="submit" value="Save changes">
-            <input class="bg-blue-500 text-white p-1 rounded hover:bg-blue-600" type="submit" value="Cancel">
+            <a href="{% url 'home' %}">Cancel</a>
         </form>
     </div> 
 </body>

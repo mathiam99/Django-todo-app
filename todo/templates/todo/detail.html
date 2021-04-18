@@ -1,4 +1,26 @@
-<h2>{{todo.title}}</h2>
-<p>{{todo.description}}</p>
-<p>{{todo.posted_date}}</p>
-<p>{{todo.completed}}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style type="text/css">
+    </style>
+    <title>{{todo.title}} - detail</title>
+</head>
+<body>
+    <div class="container bg-indigo-500 text-white max-w-full flex justify-around items-center h-14">
+        <p class="text-2xl font-bold">Todo.</p>
+    </div>
+    
+    <div class="container p-10 bg-gray-100 mx-auto my-auto">
+        <p class="text-4xl">{{todo.title}}</p>
+        <p class="font-extra-light text-gray-500 text-lg">{{todo.description}}</p>
+        <p>Created at : {{todo.posted_date}}</p>
+        <p class="mb-10">Completed : {{todo.completed}}</p>
+
+        <a class="bg-green-600 text-white py-2 px-4 font-semibold rounded hover:bg-green-800" href="{% url 'home' %}">Back</a>
+    </div>
+</body>
+</html>
