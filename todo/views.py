@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Todo
 from .forms import TodoForm
 # Create your views here.
+
 def index(request):
     todos = Todo.objects.all()
     counting = Todo.objects.count()

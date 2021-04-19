@@ -24,6 +24,12 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        
+        input#id_programmed_date{
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            width: 250px;
+        }
 
         a{
             background-color: rgb(218, 42, 42);
@@ -39,7 +45,7 @@
         <p class="text-2xl font-bold">Todo.</p>
     </div>
     
-    <p class="text-3xl mx-10">Editing a todo</p>
+    <p class="text-3xl mx-10 mt-10">Editing a todo</p>
     <div class="container mx-auto mt-5">
         <form action="" method="POST">
             {% csrf_token %}

@@ -15,10 +15,11 @@
     </div>
     
     <div class="container p-10 bg-gray-100 mx-auto my-auto">
-        <p class="text-4xl">{{todo.title}}</p>
+        <p class="text-2xl">{{todo.title}}</p>
         <p class="font-extra-light text-gray-500 text-lg">{{todo.description}}</p>
         <p>Created at : {{todo.posted_date}}</p>
-        <p class="mb-10">Completed : {{todo.completed}}</p>
+        <p class="">Completed : {{todo.completed}}</p>
+        <p class="mb-5">Programmed date : {{todo.programmed_date}}</p>
 
         <a class="bg-green-600 text-white py-2 px-4 font-semibold rounded hover:bg-green-800" href="{% url 'home' %}">Back</a>
     </div>

@@ -8,18 +8,19 @@
     <title>ToDo App</title>
 </head>
 <body>
-    <div class="container bg-indigo-500 text-white max-w-full flex justify-around items-center h-14">
+    <div class="container bg-blue-500 text-white max-w-full flex justify-around items-center h-14">
         <p class="text-2xl font-bold">Todo.</p>
     </div>
 
-    <div class="container bg-gray-200 max-w-2xl rounded-xl mx-auto p-5 mt-8">
-        <p class="text-indigo-500 text-lg text-center font-semibold mb-5">Todo list ({{counting}})</p>
+    <div class="container bg-gray-200 max-w-3xl rounded-xl mx-auto p-5 mt-8">
+        <p class="text-blue-500 text-lg text-center font-semibold mb-5">Todo list ({{counting}})</p>
         <form action="" method="POST" class="flex justify-evenly">
             {% csrf_token %}
             {{form.title}}
             {{form.description}}
+            {{form.programmed_date}}
             <br>
-            <input class="bg-indigo-500 text-white p-1 rounded-xl hover:bg-indigo-400" type="submit" value="Add new">
+            <input class="bg-blue-500 text-white p-1 rounded-xl hover:bg-blue-600" type="submit" value="Add new">
         </form>
         <hr>
         <ul class="mt-10">
@@ -29,12 +30,12 @@
                         <li class="border-b-8 flex justify-between"><a class="hover:text-indigo-500" href="{% url 'detail' todo.id %}">{{todo.title}}</a>
                     </strike>
                 {%else%}
-                    <li class="border-b-8 flex justify-between"><a class="hover:text-indigo-500" href="{% url 'detail' todo.id %}">{{todo.title}}</a>
+                    <li class="border-b-8 flex justify-between"><a class="hover:text-blue-500" href="{% url 'detail' todo.id %}">{{todo.title}}</a>
                 {%endif%}
                 <div class="action flex justify-between">
-                    <a class="hover:text-yellow-500" href="{% url 'edit' todo.id %}">Edit</a>
+                    <a class="hover:text-yellow-400" href="{% url 'edit' todo.id %}">Edit</a>
                     &nbsp;
-                    <a class="hover:text-red-400" href="{% url 'delete' todo.id %}">Delete</a>
+                    <a class="hover:text-red-500" href="{% url 'delete' todo.id %}">Delete</a>
                 </div>    
                 </li>
             {%endfor%}
